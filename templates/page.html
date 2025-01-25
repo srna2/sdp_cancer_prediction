@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Breast Cancer Prediction</h1>
+        <form method="POST" action="/predict">
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="radius_mean" name="radius_mean" placeholder="Radius Mean Value" value="{{ request.form.get('radius_mean', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="texture_mean" name="texture_mean" placeholder="Texture Mean Value" value="{{ request.form.get('texture_mean', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="perimeter_mean" name="perimeter_mean" placeholder="Perimeter Mean Value" value="{{ request.form.get('perimeter_mean', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="area_mean" name="area_mean" placeholder="Area Mean Value" value="{{ request.form.get('area_mean', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="concave_points_mean" name="concave_points_mean" placeholder="Concave Points Mean Value" value="{{ request.form.get('concave_points_mean', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="radius_worst" name="radius_worst" placeholder="Radius Worst Value" value="{{ request.form.get('radius_worst', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="texture_worst" name="texture_worst" placeholder="Texture Worst Value" value="{{ request.form.get('texture_worst', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="perimeter_worst" name="perimeter_worst" placeholder="Perimeter Worst Value" value="{{ request.form.get('perimeter_worst', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="area_worst" name="area_worst" placeholder="Area Worst Value" value="{{ request.form.get('area_worst', '') }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="concave_points_worst" name="concave_points_worst" placeholder="Concave Points Worst Value" value="{{ request.form.get('concave_points_worst', '') }}">
+                </div>
+            </div>
+            <button type="submit">Predict Cancer Type</button>
+            <h2>{{ prediction }}</h2>
+        </form>
+    </div>
+    <link rel="stylesheet" href="/static/page.css">
+</body>
+</html>

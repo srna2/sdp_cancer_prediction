@@ -1,0 +1,15 @@
+version 
+
+to run ---> python3 app.py
+
+if it says there is a problem with numpy, it means it is not installed
+
+to install numpy ---> pip3 install numpy
+
+if it says there is a problem with flask, it means it is not installed
+
+to install flask ---> pip3 install flask
+
+if it says there is a problem with sklearn, it means it is not installed
+
+to install sklearn ---> pip3 install scikit-learn
